@@ -29,7 +29,7 @@ export default function InputArea(props) {
           value={inputText.title}
         />
 
-        <label>
+        <label style={{fontSize : "20px"}}>
           Set Deadline
           <input
             name="date"

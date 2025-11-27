@@ -4,10 +4,6 @@ import TodoItem from "./TodoItem";
 
 export default function ToDoCard() {
   const [todos, setTodos] = useState([]);
-
-  // -----------------------------
-  // ADD NEW TODO + AUTO SORT
-  // -----------------------------
   function addTodo(inputData) {
     const newTodo = {
       id: Date.now(),
@@ -18,8 +14,6 @@ export default function ToDoCard() {
 
     setTodos((prev) => {
       const updated = [...prev, newTodo];
-
-      // Sort by date (closest deadline first)
       updated.sort(
         (a, b) => new Date(a.deadline) - new Date(b.deadline)
       );
@@ -28,16 +22,10 @@ export default function ToDoCard() {
     });
   }
 
-  // -----------------------------
-  // DELETE TODO
-  // -----------------------------
   function deleteTodo(id) {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   }
 
-  // -----------------------------
-  // MARK AS DONE + SORT AGAIN
-  // -----------------------------
   function markTodoDone(id) {
     setTodos((prev) => {
       const updated = prev.map((todo) =>

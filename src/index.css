@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 /* .lora-<uniquifier> {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -20,6 +25,7 @@
 
 a {
     text-decoration: none;
+    color: black;
 
 }
 
@@ -28,12 +34,41 @@ li {
     list-style: none;
 }
 
+.get-started {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+}
+
+.get-started button {
+    padding: 10px 20px;
+    margin: 30px auto;
+    border: none;
+    background: transparent;
+    background-color: #1489d7;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.get-started button:hover {
+    background-color: #0b4e7a;
+    color: #ffff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
 input:focus {
     outline: none;
 }
 
 body {
     background-image: url("../images/gradient-bg.jpg");
+    display: flex;
+    flex-direction: column;
 }
 
 .home {
@@ -70,10 +105,19 @@ body {
     text-shadow: 2px 2px 4px #dadada;
 }
 
+.nav-links:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 10px 20px;
+}
+
 .heading-title {
     text-align: center;
     font-size: 35px;
+    margin-bottom: 60px;
     font-family: 'Courier New', Courier, monospace;
+    text-shadow: 3px 3px 6px #1cd2ff;
 
 }
 
@@ -107,6 +151,7 @@ body {
 .card-title {
     font-size: 30px;
     text-align: center;
+    text-shadow: 3px 3px 6px #1cd2ff;
     margin-bottom: 12px;
 }
 
@@ -253,6 +298,123 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 3px 3px 6px #1cd2ff;
     font-size: 25px;
+    font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-heading {
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 10px 20px;
+    margin: 0;
+    background: color-mix(in srgb, #438aba, transparent 90%);
+    color: black;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px #1cd2ff;
+    border-radius: 50px;
+    /* font-family: system-ui, -apple-system, BlinkMacSsystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: "Nunito", sans-serif;
+}
+
+.form-container>div {
+    height: 400px;
+    width: 400px;
+}
+
+.form-container p {
+    font-size: 20px;
+}
+
+.form-card {
+    background: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.signup-form label {
+    font-size: 25px;
+    text-shadow: 3px 3px 6px #1cd2ff;
+}
+
+
+.signup-form input {
+    background: transparent;
+    font-size: 22px;
+    width: 100%;
+    align-items: center;
+    padding: 6px 0px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid black;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px black;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-wrapper button {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    background-color: #1489d7;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-wrapper button:hover {
+    background-color: #0b4e7a;
+    color: #ffff;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.login-form label {
+    font-size: 25px;
+    text-shadow: 3px 3px 6px #1cd2ff;
+}
+
+
+.login-form input {
+    background: transparent;
+    font-size: 22px;
+    width: 100%;
+    align-items: center;
+    padding: 6px 0px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: transparent;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid black;
+    border-bottom-right-radius: 15px 3px;
+    border-bottom-left-radius: 3px 15px;
+    border: solid 3px transparent;
+    border-bottom: dashed 3px black;
 }
