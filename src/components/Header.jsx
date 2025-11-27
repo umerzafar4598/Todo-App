@@ -9,8 +9,8 @@ export default function Header(props) {
             <a className="nav-links" href="#"><li>Logout</li></a>
         </ul>
         : <ul>
-                <a className="nav-links" href="#"><li>Sign Up</li></a>
-                <a className="nav-links" href="#"><li>Login</li></a>
+                <a className="nav-links" href="/signup"><li>Sign Up</li></a>
+                <a className="nav-links" href="/login"><li>Login</li></a>
             </ul>}
 
     </nav>
