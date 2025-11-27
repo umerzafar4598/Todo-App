@@ -1,17 +1,31 @@
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
-    return <nav className="navbar">
-        <div className="home">
-            <a className="nav-links" href="/">{props.authorize ? "Dashboard" : "Home"}</a>
-        </div>
-        {props.authorize ?
-        <ul>
-            <a className="nav-links" href="#"><li>Logout</li></a>
-        </ul>
-        : <ul>
-                <a className="nav-links" href="/signup"><li>Sign Up</li></a>
-                <a className="nav-links" href="/login"><li>Login</li></a>
-            </ul>}
+  return (
+    <nav className="navbar">
+      <div className="home">
+        <Link className="nav-links" to="/">
+          {props.authorize ? "Dashboard" : "Home"}
+        </Link>
+      </div>
 
+      {props.authorize ? (
+        <ul>
+          <Link className="nav-links" to="#">
+            <li>Logout</li>
+          </Link>
+        </ul>
+      ) : (
+        <ul>
+          <Link className="nav-links" to="/signup">
+            <li>Sign Up</li>
+          </Link>
+
+          <Link className="nav-links" to="/login">
+            <li>Login</li>
+          </Link>
+        </ul>
+      )}
     </nav>
+  );
 }
