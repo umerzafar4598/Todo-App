@@ -29,7 +29,9 @@ export default function TodoItem(props) {
     }
     return (
 
-        <div className="todo-item" data-aos="fade-right">
+        <div className="todo-item" data-aos="fade-right"
+            style={{ color: props.done ? 'grey' : 'white' }}
+        >
             <div className="todo-left">
                 <div className="checkbox" onClick={props.onToggle} >
                     {props.done ? '✓' : ''}
@@ -53,7 +55,7 @@ export default function TodoItem(props) {
                 </div>
                 )}
             </div>
-            <div className="task-deadline">
+            <div className="task-deadline" style={{ textDecoration: props.done ? 'line-through' : 'none' }}>
                 {isEditing ? (
                     <input
                         type="date"
@@ -73,8 +75,12 @@ export default function TodoItem(props) {
                 </div>
             ) : (
                 <div className="action-btn">
-                    <button className="btn-edit" onClick={() => setIsEditing(true)}>Edit</button>
-                    <button className="btn-delete" onClick={props.onDelete}>Delete</button>
+                    <button disabled={props.done} className="btn-edit" onClick={() => setIsEditing(true)} style={{ backgroundColor: props.done ? 'grey' : '#bec400' }}>
+                        Edit
+                    </button>
+                    <button className="btn-delete" onClick={props.onDelete} style={{ backgroundColor: props.done ? 'grey' : '#ce0a0a' }}>
+                        Delete
+                    </button>
                 </div>
             )}
         </div>

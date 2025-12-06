@@ -7,6 +7,7 @@ A modern, responsive **Full-Stack Todo Application** built with **React**, **Exp
 ## Table of Contents
 
 - [Features](#features)  
+- [Screenshots](#screenshots)  
 - [Tech Stack](#tech-stack)  
 - [Installation](#installation)  
 - [Usage](#usage)  
@@ -24,6 +25,18 @@ A modern, responsive **Full-Stack Todo Application** built with **React**, **Exp
 - ✅ **Session-Based Authentication**: Secure login and signup using sessions.  
 - ✅ **User Management**: Each user can only access their own todos.  
 - ✅ **Persistent Database**: PostgreSQL stores all tasks and user data.   
+
+---
+
+## Screenshots
+
+### Home
+
+![Home Page](/screenshots/Home.png)
+
+### Todo Page
+
+![Todo Page](/screenshots/Todo-Page.png)
 
 ---
 

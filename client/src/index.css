@@ -321,7 +321,6 @@ body {
 .btn-delete:hover {
     background-color: #f7a392;
     transform: scale(1.05);
-    color: black;
 }
 
 .edit-input-title {
