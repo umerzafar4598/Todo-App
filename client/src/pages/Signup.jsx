@@ -31,7 +31,7 @@ export default function Signup() {
         try {
             await register(signupData);
             navigate('/');
-        } catch (error) {
+        } catch (err) {
             setError(err.response?.data?.message || 'Registration failed');
         }
     }
